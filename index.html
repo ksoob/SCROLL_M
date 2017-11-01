@@ -8,7 +8,7 @@
 		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
 		.top{width:100%;height:50px;background: #416b52;}
 		.section{height:600px;width:100%;position: relative}
-		header{height:500px; width:200px;background: #416b52;width:100%; transition: all 0.3s}
+		header{height:300px; width:200px;background: #416b52;width:100%; transition: all 0.3s}
 		header #logo{width:200;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700; padding-top:75px; position:relative;left:calc(50% - 100px);transition: all 0.3s;color:white;}
 		header #main{width:90%;height:10px;position:relative;left:calc(50% - 45%);padding-top:4px;transition: all 0.3s;background: none;}
 		header #menu{width:700px;height:50px;position:relative;left:calc(50% - 350px);top:680px;transition: all 0.3s;background: white;}
@@ -31,7 +31,7 @@
         #sectionF{ background: white; transition: all 1s; }
         #sectionG{ background:#416b52; transition: all 1s; }
         #img1{width:240px;position:relative;left:calc(50% - 115px);margin-bottom: -170px;}
-        #img2{width:300px;position:relative;left:calc(50% - 150px);}
+        #img2{width:300px;position:relative;left:calc(50% - 150px);padding-top:-900px;transition:all 1s;}
 		#titleA{transition:all 1s;}
 		#titleB{transition: all 1s;}
 		#titleC{transition: all 1s;}
@@ -71,7 +71,7 @@
 	</div>
 </header>
 <div class="section" id="sectionA">
-	<h1 id="titleA"></h1>
+	
 	<img id="img2" src="logo2.png">
 	
 </div>
@@ -115,7 +115,7 @@
 	window.onscroll = function(){
 		console.log(document.body.scrollTop);
 		var scrollH = document.body.scrollTop;
-		if(scrollH > 50){
+		if(scrollH > 10){
 			header.style.height = "100px";
 			header.style.position = "fixed";
 			header.style.top = "0px";
@@ -127,12 +127,13 @@
 			main.style.background = "none"
 
 
-			menu.style.top = "calc(100% + 500px)";
+			menu.style.top = "calc(50% + 650px)";
 			logo.style.width = "400px";
 			logo.style.left = "calc(50% - 200px)"
 			logo.style.top = "10px";
 			logo.style.paddingTop = "20px";
-
+			
+			
 			
 		}else{
 			header.style.height = "300px";
@@ -148,17 +149,20 @@
 			logo.style.width = "200px";
 			logo.style.left = "calc(50% - 100px)"
 			logo.style.paddingTop = "80px";
+			
+			
 		}
 
-		if(scrollH > 280){
-			titleA.style.paddingTop = "300px";
+		if(scrollH > 50){
+			img2.style.paddingTop = "250px";
 			menuA.style.background = "#416b52";
 			menuA.style.color = "white";
 		}else{
-			titleA.style.paddingTop = "100px";
+			img2.style.paddingTop = "-900px";
+			
 			menuA.style.background = "white";
 			menuA.style.color = "black";
-			menuA.style.stroke = "black";
+			
 			
 		}
 
@@ -176,17 +180,24 @@
 			menuB.style.color = "black";
 		}
 
-		if(scrollH > 918){
+		if(scrollH > 425){
 			sectionC.style.backgroundAttachment = "fixed";
+			
+		}else{
+			sectionC.style.backgroundAttachment = "scroll";
+
+		}
+
+		if(scrollH > 950){
 			menuC.style.background = "#416b52";
 			menuC.style.color = "white";
 		}else{
-			sectionC.style.backgroundAttachment = "scroll";
+			
 			menuC.style.background = "white";
 			menuC.style.color = "black";
 		}
 
-		if(scrollH > 1686){
+		if(scrollH > 1650){
 			titleD.style.paddingTop = "300px"
 			sectionD.style.background = "#416b52";
 			titleD.style.color = "white";
@@ -223,11 +234,15 @@
 			menuF.style.background = "white";
 			menuF.style.color = "black";
 		}
+
+		if(scrollH > 2830){
+		    menu.style.top = "1000px";
+		}else{
+		    menu.style.top = "calc(50% + 650px)";
+		}
 		
 
 
 	}
 </script>
 </body>
-
-
