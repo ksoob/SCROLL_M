@@ -187,16 +187,14 @@
 			header.style.background = "#416b52";
 			
 			main.style.height = "0px";
-			main.style.top = "-10px";
+			main.style.paddingTop = "-10px";
 			main.style.background = "none"
-
 
 			menu.style.top = "calc(50% + 650px)";
 			logo.style.width = "400px";
 			logo.style.left = "calc(50% - 200px)"
 			logo.style.top = "10px";
 			logo.style.paddingTop = "20px";
-			
 			
 			
 		}else{
@@ -212,7 +210,8 @@
 			menu.style.top = "1000px";
 			logo.style.width = "200px";
 			logo.style.left = "calc(50% - 100px)"
-			logo.style.paddingTop = "80px";
+			logo.style.top = "0px";
+			logo.style.paddingTop = "75px";
 			
 			
 		}
